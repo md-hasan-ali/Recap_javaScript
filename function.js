@@ -12,21 +12,32 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 52, 36, 85, 20, 30, 10]
 let max = Math.max.apply(null, array)
 // console.log(max)
 
-let array1 = [1,2,3,4];  
-let newarray=[5,6,7,8,10,20]  
-array.push.apply(array1, newarray);  
+let array1 = [1, 2, 3, 4];
+let newarray = [5, 6, 7, 8, 10, 20]
+array.push.apply(array1, newarray);
 // console.log(array1)
 
 // Example of using the Bind method
 
-let website = {  
-    name: "Hasan Ali",  
-    getName: function() {  
-      return this.name;  
-    }  
-  }  
+let website = {
+    name: "Hasan Ali",
+    getName: function () {
+        return this.name;
+    }
+}
 
-  let unboundGetName = website.getName;  
-  console.log(unboundGetName)
-  let boundGetName = unboundGetName.bind(website);  
-  console.log(boundGetName());  
+let unboundGetName = website.getName;
+let boundGetName = unboundGetName.bind(website);
+// console.log(boundGetName());
+
+
+// Example of using the Bind method
+function Emp(id, name) {
+    this.id = id;
+    this.name = name;
+}
+function PermanentEmp(id, name) {
+    Emp.call(this, id, name)
+}
+const uniqueEmp = new PermanentEmp(101, "Hasan Ali")
+console.log(uniqueEmp.name)
