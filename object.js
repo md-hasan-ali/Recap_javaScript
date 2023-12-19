@@ -15,3 +15,36 @@ function emp1(id, name, salary) {
 e = new emp1(103, "Vimal Jaiswal", 30000);
 
 console.log(e.id + " " + e.name + " " + e.salary);  
+
+// Object with this keyword
+
+let calculator = {
+    value: 0,
+    add: function(num) {
+        this.value += num;
+    },
+    subtract: function(num) {
+        this.value -= num;
+    },
+    getValue: function() {
+        return this.value;
+    }
+};
+
+calculator.add(5);
+calculator.subtract(2);
+
+// console.log(calculator.getValue()); 
+
+
+// Object methods using ES6+ syntax
+let car = {
+    make: 'Honda',
+    model: 'Civic',
+    year: 2021,
+    getInfo() {
+        return `${this.year} ${this.make} ${this.model}`;
+    }
+};
+
+console.log(car.getInfo()); 
