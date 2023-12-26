@@ -22,33 +22,33 @@ class Employee extends Animal {
     }
 }
 var emp = new Employee("Abul", "Manuser moto");
-console.log("Name", emp.name + ", " + emp.sound);
+// console.log("Name", emp.name + ", " + emp.sound);
 
 
 
 // Inheritance with classes
-// class Bird extends Animal {
-//     constructor(name, sound, canFly) {
-//         super(name, sound);
-//         this.canFly = canFly;
-//     }
-//     fly() {
-//         if (this.canFly) {
-//             console.log(`${this.name} is flying.`);
-//         } else {
-//             console.log(`${this.name} cannot fly.`);
-//         }
-//     }
-// }
-// // Creating instances of the Bird class
-// let sparrow = new Bird('Sparrow', 'Chirp', true);
-// let penguin = new Bird('Penguin', 'Honk', false);
+class Bird extends Animal {
+    constructor(name, sound, canFly) {
+        super(name, sound);
+        this.canFly = canFly;
+    }
+    fly() {
+        if (this.canFly) {
+            console.log(`${this.name} is flying.`);
+        } else {
+            console.log(`${this.name} cannot fly.`);
+        }
+    }
+}
+// Creating instances of the Bird class
+let sparrow = new Bird('Sparrow', 'Chirp', true);
+let penguin = new Bird('Penguin', 'Honk', false);
 
-// sparrow.makeSound();
-// sparrow.fly();
+sparrow.makeSound();
+sparrow.fly();
 
-// penguin.makeSound();
-// penguin.fly();
+penguin.makeSound();
+penguin.fly();
 
 
 
