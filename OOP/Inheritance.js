@@ -1,6 +1,6 @@
 // Class with Constructor Method
 class Human {
-    constructor(name){
+    constructor(name) {
         this.name = name;
         this.mouth = true;
         this.legs = true;
@@ -11,7 +11,7 @@ const newMan = new Human("Abul");
 
 // Inheritance 01
 
-class Baby extends Human{
+class Baby extends Human {
     constructor(name) {
         super(name);
         this.cute = true;
@@ -25,7 +25,7 @@ class Baby extends Human{
 
 // Inheritance 02
 
-class Teenager extends Human{
+class Teenager extends Human {
     constructor(name) {
         super(name);
         this.emotion = true;
@@ -35,4 +35,32 @@ class Teenager extends Human{
     }
 }
 const tenager = new Teenager("Abul khan");
-console.log(tenager)
+// console.log(tenager)
+
+// Inheritance 03
+class Player {
+    constructor(name, age, category) {
+        this.name = name;
+        this.age = age;
+        this.category = category;
+    }
+    details() {
+        console.log(`${this.name} is ${this.category} Player and  He is ${this.age} years OLD.`)
+    }
+}
+class cricketPlayer extends Player {
+    constructor(name, age, centuries, category) {
+        super(name, age, category);
+        this.centuries = centuries;
+    }
+}
+class footballPlayer extends Player {
+    constructor(name, age, goals, category) {
+        super(name, age, category);
+        this.goals = goals;
+    }
+}
+const musfiq = new cricketPlayer("Musfiq", 35, 100, "cricket");
+musfiq.details()
+const messi = new footballPlayer("Messi", 35, 100, "football");
+messi.details()
