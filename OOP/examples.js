@@ -72,3 +72,41 @@ class Designer extends Employe {
 }
 const graphicDesigner = new Designer("Hasan", 24, 30000);
 console.log(graphicDesigner.getInfo())
+
+
+// Polymorphism example in JavaScript
+
+// Base class
+class Shape {
+    constructor() {}
+    calculateArea() {
+        throw new Error('Abstract method calculateArea must be implemented by subclasses.');
+    }
+}
+class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+    calculateArea() {
+        return Math.PI * this.radius ** 2;
+    }
+}
+class Square extends Shape {
+    constructor(side) {
+        super();
+        this.side = side;
+    }
+    calculateArea() {
+        return this.side ** 2;
+    }
+}
+function printArea(shape) {
+    console.log(`Area: ${shape.calculateArea()}`);
+}
+let circle = new Circle(5);
+let square = new Square(4);
+
+// Using the polymorphic function
+printArea(circle);  
+printArea(square);
