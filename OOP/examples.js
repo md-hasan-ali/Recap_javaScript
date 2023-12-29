@@ -110,3 +110,22 @@ let square = new Square(4);
 // Using the polymorphic function
 printArea(circle);  
 printArea(square);
+
+
+// Composition and encapsulation example
+class Engine {
+    start() {
+        return 'Engine started';
+    }
+}
+class Car {
+    constructor() {
+        this._engine = new Engine();
+    }
+    start() {
+        return `${this._engine.start()} - Car started`;
+    }
+}
+// Using composition
+let myCar = new Car();
+console.log(myCar.start());  // Output: Engine started - Car started
