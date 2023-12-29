@@ -1,13 +1,36 @@
-// class Player {
-//     constructor(name, age, skill) {
-//         this.name = name;
-//         this.age = age;
-//         this.skill = skill
-//     }
-//     sayHello() {
-//         console.log(`Hi I'm ${this.name} - I am ${this.skill} - Age: ${this.age} Years`)
-//     }
-// }
-// const Tanjim = new Player("Tanjim", 24, "Bowler");
-// const mahmudullah = new Player("Mahmudullah", 34, "All Rounder")
-// mahmudullah.sayHello()
+// Encapsolutions Examples 
+
+class BankAccount {
+    constructor(accountHolder, balance) {
+        this._accountHolder = accountHolder;
+        this._balance = balance;
+    }
+    get accountHolder() {
+        return this._accountHolder
+    }
+    get balance() {
+        return this._balance;
+    }
+    dipositeMoney(amount) {
+        if (amount > 0) {
+            this._balance = this._balance + amount;
+            console.log(`${amount} Diposited: New Balance ${this._balance}`)
+        } else {
+            console.log('Invalid Amount')
+        }
+    }
+    withdraw(withdrawAmount) {
+        if (withdrawAmount > 0 && withdrawAmount < this._balance) {
+            this._balance = this.balance - withdrawAmount;
+            console.log(`${withdrawAmount} Withdrawn. New Balance ${this._balance}`)
+        } else {
+            console.log("Invalid Amount")
+        }
+    }
+
+}
+const myAccount = new BankAccount("Hasan Ali", 1000);
+console.log(`My Account Name: ${myAccount._accountHolder}`);
+console.log(`My Account Balance: ${myAccount._balance}`);
+myAccount.dipositeMoney(500);
+myAccount.withdraw(200);

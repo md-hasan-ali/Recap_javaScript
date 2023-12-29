@@ -58,5 +58,55 @@ class Programmer {
     }
 }
 const hasan = new Programmer("Hasan Ali", "1999-08-07", 25000, 12);
-console.log(hasan.name);
+// console.log(hasan.name);
 // console.log(hasan.getSalary());
+
+
+// Another encapsolution examples
+class BankAccount {
+    constructor(accountHolder, balance) {
+        this._accountHolder = accountHolder;
+        this._balance = balance;
+    }
+
+    // Getter for account holder
+    get accountHolder() {
+        return this._accountHolder;
+    }
+
+    // Getter for balance
+    get balance() {
+        return this._balance;
+    }
+
+    // Method to deposit money
+    deposit(amount) {
+        if (amount > 0) {
+            this._balance += amount;
+            console.log(`${amount} deposited. New balance: ${this._balance}`);
+        } else {
+            console.log('Invalid deposit amount.');
+        }
+    }
+
+    // Method to withdraw money
+    withdraw(amount) {
+        if (amount > 0 && amount <= this._balance) {
+            this._balance -= amount;
+            console.log(`${amount} withdrawn. New balance: ${this._balance}`);
+        } else {
+            console.log('Invalid withdrawal amount or insufficient funds.');
+        }
+    }
+}
+
+// Creating an instance of BankAccount
+let myAccount = new BankAccount('John Doe', 1000);
+
+// Accessing attributes using getters
+console.log(`Account Holder: ${myAccount.accountHolder}`);
+console.log(`Balance: $${myAccount.balance}`);
+
+// Depositing and withdrawing money
+myAccount.deposit(500);
+myAccount.withdraw(200);
