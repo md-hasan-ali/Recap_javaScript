@@ -12,10 +12,8 @@ function calculate_age(dob) {
 function getSalary(monthlySalary, noOfMonth) {
     return (monthlySalary * noOfMonth).toLocaleString();
 }
-
 // console.log(calculate_age(birthDay));
 // console.log(getSalary(monthlySalary, noOfMonth));
-
 
 const shakib = {
     name: "Shakib Al Hasan",
@@ -34,7 +32,6 @@ const shakib = {
 }
 // console.log(shakib.calculate_age())
 // console.log(shakib.getSalary())
-
 
 // Encapsolutions 
 class Programmer {

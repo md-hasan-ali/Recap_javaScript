@@ -1,5 +1,5 @@
-// Encapsolutions Examples 
 
+// Encapslations Examples 
 class BankAccount {
     constructor(accountHolder, balance) {
         this._accountHolder = accountHolder;
@@ -34,3 +34,41 @@ console.log(`My Account Name: ${myAccount._accountHolder}`);
 console.log(`My Account Balance: ${myAccount._balance}`);
 myAccount.dipositeMoney(500);
 myAccount.withdraw(200);
+
+
+// Abstraction Example
+class Employe {
+    constructor(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+    getInfo() {
+        return `Employe Name: ${this.getName()}, Age ${this.getAge()} and Salary: ${this.getSalary()}`
+    }
+    getName() {
+        throw new Error("Abstract method for get name")
+    }
+    getAge() {
+        throw new Error("Abstract method for get age")
+    }
+    getSalary() {
+        throw new Error("Abstract method for get Salary")
+    }
+}
+class Designer extends Employe {
+    constructor(name, age, salary) {
+        super(name, age, salary);
+    }
+    getName() {
+        return `${this.name}`
+    }
+    getAge() {
+        return `${this.age}`
+    }
+    getSalary() {
+        return `${this.salary}`
+    }
+}
+const graphicDesigner = new Designer("Hasan", 24, 30000);
+console.log(graphicDesigner.getInfo())
