@@ -1,11 +1,13 @@
+const alu = "sss"
 const language = {
     lang: "JavaScript",
     use: "Web application",
-    year: 1995
+    year: 1995,
+    a,
 }
-// console.log(Object.keys(language))
-// console.log(Object.values(language))
-// console.log(Object.entries(language))
+console.log(Object.keys(language))
+console.log(Object.values(language))
+console.log(Object.entries(language))
 
 
 // Adding a new property and value 
