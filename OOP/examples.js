@@ -129,3 +129,27 @@ class Car {
 // // Using composition
 // let myCar = new Car();
 // console.log(myCar.start());  // Output: Engine started - Car started
+
+
+// Encapsulation in JS 
+class Bus {
+    #name;
+    #model
+    constructor(name, model) {
+        this.#name = name;
+        this.#model = model;
+    }
+    getName() {
+        console.log(`Car Name is ${this.#name}`)
+    }
+    getModel() {
+        console.log(`Model Name is ${this.#model}`)
+    }
+    getInformation() {
+        console.log(`Brand ${this.#name} and Model ${this.#model}`)
+    }
+}
+const car1 = new Bus("BMW", 105)
+car1.getName()
+car1.getModel()
+car1.getInformation()
