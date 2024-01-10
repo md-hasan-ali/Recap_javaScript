@@ -15,6 +15,7 @@ function getSalary(monthlySalary, noOfMonth) {
 // console.log(calculate_age(birthDay));
 // console.log(getSalary(monthlySalary, noOfMonth));
 
+
 const shakib = {
     name: "Shakib Al Hasan",
     birthDay: "1998-08-07",
@@ -65,17 +66,14 @@ class BankAccount {
         this._accountHolder = accountHolder;
         this._balance = balance;
     }
-
     // Getter for account holder
     get accountHolder() {
         return this._accountHolder;
     }
-
     // Getter for balance
     get balance() {
         return this._balance;
     }
-
     // Method to deposit money
     deposit(amount) {
         if (amount > 0) {
@@ -85,7 +83,6 @@ class BankAccount {
             console.log('Invalid deposit amount.');
         }
     }
-
     // Method to withdraw money
     withdraw(amount) {
         if (amount > 0 && amount <= this._balance) {

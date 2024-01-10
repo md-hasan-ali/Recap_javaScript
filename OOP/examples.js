@@ -29,11 +29,11 @@ class BankAccount {
     }
 
 }
-const myAccount = new BankAccount("Hasan Ali", 1000);
-console.log(`My Account Name: ${myAccount._accountHolder}`);
-console.log(`My Account Balance: ${myAccount._balance}`);
-myAccount.dipositeMoney(500);
-myAccount.withdraw(200);
+// const myAccount = new BankAccount("Hasan Ali", 1000);
+// console.log(`My Account Name: ${myAccount._accountHolder}`);
+// console.log(`My Account Balance: ${myAccount._balance}`);
+// myAccount.dipositeMoney(500);
+// myAccount.withdraw(200);
 
 
 // Abstraction Example
@@ -71,14 +71,14 @@ class Designer extends Employe {
     }
 }
 const graphicDesigner = new Designer("Hasan", 24, 30000);
-console.log(graphicDesigner.getInfo())
+// console.log(graphicDesigner.getInfo())
 
 
 // Polymorphism example in JavaScript
 
 // Base class
 class Shape {
-    constructor() {}
+    constructor() { }
     calculateArea() {
         throw new Error('Abstract method calculateArea must be implemented by subclasses.');
     }
@@ -108,8 +108,8 @@ let circle = new Circle(5);
 let square = new Square(4);
 
 // Using the polymorphic function
-printArea(circle);  
-printArea(square);
+// printArea(circle);
+// printArea(square);
 
 
 // Composition and encapsulation example
@@ -126,6 +126,6 @@ class Car {
         return `${this._engine.start()} - Car started`;
     }
 }
-// Using composition
-let myCar = new Car();
-console.log(myCar.start());  // Output: Engine started - Car started
+// // Using composition
+// let myCar = new Car();
+// console.log(myCar.start());  // Output: Engine started - Car started
