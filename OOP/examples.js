@@ -150,6 +150,35 @@ class Bus {
     }
 }
 const car1 = new Bus("BMW", 105)
-car1.getName()
-car1.getModel()
-car1.getInformation()
+// car1.getName()
+// car1.getModel()
+// car1.getInformation()
+
+
+// Inheritance Examples 
+class Vehicle {
+    constructor(make, model) {
+      this.make = make;
+      this.model = model;
+    }
+  
+    displayInfo() {
+      console.log(`Vehicle: ${this.make} ${this.model}`);
+    }
+  }
+  
+  class Car extends Vehicle {
+    constructor(make, model, year) {
+      super(make, model);
+      this.year = year;
+    }
+  
+    displayYear() {
+      console.log(`Year: ${this.year}`);
+    }
+  }
+  
+  const myCar = new Car('Toyota', 'Camry', 2022);
+  myCar.displayInfo(); 
+  myCar.displayYear(); 
+  
