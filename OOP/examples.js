@@ -196,7 +196,7 @@ class BankAccount {
         console.log(`Diposited ${amount} into the account No: ${this.accountNumber}`)
     }
     withdrwaMoney(amount) {
-        if (this.balance >= amount && this.balance >= amount) {
+        if (amount > 0 && amount < this.balance) {
             this.balance -= amount;
         } else {
             console.log("Invalid Amount")
@@ -206,7 +206,7 @@ class BankAccount {
         console.log(`Account Name: ${this.accountHolderName} and Balance: ${this.balance}`)
     }
 }
-class BankManagementSystem{
+class BankManagementSystem {
     constructor() {
         this.accounts = [];
     }
@@ -216,20 +216,22 @@ class BankManagementSystem{
         console.log(`Account ${accounName} created for ${accountHolder} with an initial balance of ${intialBalance}.`);
     }
     getAccount(accNum) {
-        const account = this.accounts.find(acc=> acc.accountNumber === accNum)
+        const account = this.accounts.find(acc => acc.accountNumber === accNum)
         return account;
     }
-} 
+}
 
 
 const bankSystem = new BankManagementSystem();
 bankSystem.createAccount("01", "Hasan Ali", 500);
 bankSystem.createAccount("02", "Hossin Ali", 100);
+
 const hasanAccount = bankSystem.getAccount("01");
 const hossinAccount = bankSystem.getAccount("02");
+
 console.log(hasanAccount)
 console.log(hossinAccount)
 
 hasanAccount.diposit(2000)
-hasanAccount.withdrwaMoney(-4000)
+hasanAccount.withdrwaMoney("00")
 hasanAccount.getCurrentBalance()
