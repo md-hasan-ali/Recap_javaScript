@@ -1,6 +1,6 @@
 
 // Encapslations Examples 
-class BankAccount {
+class BankAccount1 {
     constructor(accountHolder, balance) {
         this._accountHolder = accountHolder;
         this._balance = balance;
@@ -29,7 +29,7 @@ class BankAccount {
     }
 
 }
-// const myAccount = new BankAccount("Hasan Ali", 1000);
+// const myAccount = new BankAccount1("Hasan Ali", 1000);
 // console.log(`My Account Name: ${myAccount._accountHolder}`);
 // console.log(`My Account Balance: ${myAccount._balance}`);
 // myAccount.dipositeMoney(500);
@@ -158,27 +158,52 @@ const car1 = new Bus("BMW", 105)
 // Inheritance Examples 
 class Vehicle {
     constructor(make, model) {
-      this.make = make;
-      this.model = model;
+        this.make = make;
+        this.model = model;
     }
-  
+
     displayInfo() {
-      console.log(`Vehicle: ${this.make} ${this.model}`);
+        console.log(`Vehicle: ${this.make} ${this.model}`);
     }
-  }
-  
-  class Car extends Vehicle {
+}
+
+class Car extends Vehicle {
     constructor(make, model, year) {
-      super(make, model);
-      this.year = year;
+        super(make, model);
+        this.year = year;
     }
-  
+
     displayYear() {
-      console.log(`Year: ${this.year}`);
+        console.log(`Year: ${this.year}`);
     }
-  }
-  
-  const myCar = new Car('Toyota', 'Camry', 2022);
-  myCar.displayInfo(); 
-  myCar.displayYear(); 
-  
+}
+
+const myCar = new Car('Toyota', 'Camry', 2022);
+//   myCar.displayInfo(); 
+//   myCar.displayYear(); 
+
+
+// Create a simple banking management system using OOP Concept
+
+class BankAccount {
+    constructor(accountNumber, accountHolderName, balance) {
+        this.accountNumber = accountNumber
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
+    diposit(amount) {
+        this.balance += amount;
+        console.log(`Diposited ${amount} into the account No: ${this.accountNumber}`)
+    }
+    withdrwaMoney(amount) {
+        if (this.balance <= amount && this.balance > 0) {
+            this.balance -= amount;
+        } else {
+            console.log("Invalid Amount")
+        }
+    }
+    getCurrentBalance() {
+        console.log(`Account Name: ${this.accountHolderName} and Balance: ${this.balance}`)
+    }
+}
+
