@@ -167,7 +167,7 @@ class Vehicle {
     }
 }
 
-class Car extends Vehicle {
+class Car1 extends Vehicle {
     constructor(make, model, year) {
         super(make, model);
         this.year = year;
@@ -178,7 +178,7 @@ class Car extends Vehicle {
     }
 }
 
-const myCar = new Car('Toyota', 'Camry', 2022);
+const myCar = new Car1('Toyota', 'Camry', 2022);
 //   myCar.displayInfo(); 
 //   myCar.displayYear(); 
 
@@ -196,7 +196,7 @@ class BankAccount {
         console.log(`Diposited ${amount} into the account No: ${this.accountNumber}`)
     }
     withdrwaMoney(amount) {
-        if (this.balance <= amount && this.balance > 0) {
+        if (this.balance >= amount && this.balance >= amount) {
             this.balance -= amount;
         } else {
             console.log("Invalid Amount")
@@ -206,4 +206,30 @@ class BankAccount {
         console.log(`Account Name: ${this.accountHolderName} and Balance: ${this.balance}`)
     }
 }
+class BankManagementSystem{
+    constructor() {
+        this.accounts = [];
+    }
+    createAccount(accounName, accountHolder, intialBalance) {
+        const newAccount = new BankAccount(accounName, accountHolder, intialBalance);
+        this.accounts.push(newAccount)
+        console.log(`Account ${accounName} created for ${accountHolder} with an initial balance of ${intialBalance}.`);
+    }
+    getAccount(accNum) {
+        const account = this.accounts.find(acc=> acc.accountNumber === accNum)
+        return account;
+    }
+} 
 
+
+const bankSystem = new BankManagementSystem();
+bankSystem.createAccount("01", "Hasan Ali", 500);
+bankSystem.createAccount("02", "Hossin Ali", 100);
+const hasanAccount = bankSystem.getAccount("01");
+const hossinAccount = bankSystem.getAccount("02");
+console.log(hasanAccount)
+console.log(hossinAccount)
+
+hasanAccount.diposit(2000)
+hasanAccount.withdrwaMoney(-4000)
+hasanAccount.getCurrentBalance()
