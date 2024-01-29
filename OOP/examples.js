@@ -221,7 +221,6 @@ class BankManagementSystem {
     }
 }
 
-
 const bankSystem = new BankManagementSystem();
 bankSystem.createAccount("01", "Hasan Ali", 500);
 bankSystem.createAccount("02", "Hossin Ali", 100);
