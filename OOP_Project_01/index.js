@@ -15,7 +15,6 @@ const teacherInfo = new Teacher(
     "Math",
     40000
 )
-
 personInfo.print();
 studentInfo.print();
 teacherInfo.print();
