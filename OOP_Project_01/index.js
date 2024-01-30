@@ -2,6 +2,7 @@ const Person = require("./Person")
 const Student = require("./student")
 const Teacher = require("./teacher")
 
+const personInfo = new Person("Ringku", "ringku@gmail.com");
 const studentInfo = new Student(
     "Hasan",
     "hasan@ali.com",
@@ -15,7 +16,8 @@ const teacherInfo = new Teacher(
     40000
 )
 
+personInfo.print();
 studentInfo.print();
-teacherInfo.print()
+teacherInfo.print();
 
 
