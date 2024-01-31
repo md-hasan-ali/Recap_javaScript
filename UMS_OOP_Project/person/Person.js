@@ -23,13 +23,22 @@ class Person{
     get blood() {
         return this[_blood]
     }
+    set blood(value) {
+        this[_blood] = value;
+    }
     get contact() {
         return this[_contact]
     }
-
-    print() {
-        console.log(`ID: ${this[_id]},  Name: ${this[_name]}`)
+    set contact(value) {
+        this[_contact] = value;
     }
+
+    toString() {
+        return `${this[_id]} - ${this[_name]}`
+    }
+    // print() {
+    //     console.log(`ID: ${this[_id]},  Name: ${this[_name]}`)
+    // }
 }
 
 module.exports = Person;

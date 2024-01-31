@@ -12,13 +12,25 @@ class Guardian extends Person {
     get profession() {
         return this[_profession]
     }
+    set profession(value) {
+        his[_profession] = value;
+    }
     get income() {
         return this[_income]
     }
-    print() {
-        super.print();
+    set income(value) {
+        this[_income] = value
+    }
+
+    toString() {
+        super.toString()
         console.log(`Profession: ${this[_profession]}, Income: ${this[_income]}`)
     }
+
+    // print() {
+    //     super.print();
+    //     console.log(`Profession: ${this[_profession]}, Income: ${this[_income]}`)
+    // }
 }
 
 module.exports = Guardian;
