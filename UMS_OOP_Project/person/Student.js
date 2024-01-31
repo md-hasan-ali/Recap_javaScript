@@ -33,8 +33,7 @@ class Student extends UniPerson{
         this[_fee] = value;
     }
     toString() {
-        super.toString()
-        console.log(`Student ID: ${this[_studentID]}`)
+        return `${super.toString()}, Student ID: ${this[_studentID]}`
     }
 }
 

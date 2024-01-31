@@ -26,8 +26,7 @@ class UniPerson extends Person {
     }
 
     toString() {
-        super.toString();
-        console.log(`Depertment: ${this[_depertment]}, Account: ${this[_account]}`)
+        return `${super.toString()}, Depertment: ${this[_depertment]}, Account: ${this[_account]}`
     }
 
     // print() {
