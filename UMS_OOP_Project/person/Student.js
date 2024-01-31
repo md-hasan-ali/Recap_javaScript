@@ -10,7 +10,7 @@ class Student extends UniPerson{
         super(id, name);
         this[_studentID] = studentID;
         this[_guardian] = guardian;
-        this[_exams] = [];
+        this[_exams] = []; 
         this[_fee] = null;
     }
     
