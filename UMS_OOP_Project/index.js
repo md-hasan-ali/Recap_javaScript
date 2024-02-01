@@ -1,6 +1,6 @@
 const { Guardian, Student } = require('./person');
 const { Contact, Address } = require('./contact');
-const { Depertment } = require('./university');
+const { Depertment , Subject} = require('./university');
 
 
 // Guardian ID 01
@@ -38,6 +38,19 @@ student.contact = new Contact({
 })
 
 // Depertment 01
-
-
+const depertment = new Depertment({
+    id: 1,
+    name: 'SWE'
+})
+student.depertment = depertment;   
+depertment.subjects = [
+    new Subject("01", "Match", 4),
+    new Subject("02", "Physics", 3),
+    new Subject("01", "Software Testing", 5)
+]
+const credit = student.depertment.subjects.reduce((a, b) => {
+    a += b.credit;
+    return a;
+}, 0)
 console.log(student)
+console.log(credit)

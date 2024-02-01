@@ -1,6 +1,6 @@
 const _id = Symbol('id')
 const _name = Symbol('name')
-const _credit = Symbol(credit)
+const _credit = Symbol('credit')
 
 class Subject {
     constructor(id, name, credit) {
