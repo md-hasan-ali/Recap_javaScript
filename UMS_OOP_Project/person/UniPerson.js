@@ -6,8 +6,8 @@ const _account = Symbol('account')
 class UniPerson extends Person {
     constructor(id, name, depertment, account) {
         super(id, name)
-        this[_depertment] = depertment;
-        this[_account] = account;
+        this[_depertment] = depertment || '';
+        this[_account] = account || '';
     }
     get depertment() {
         return this[_depertment]
