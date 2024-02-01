@@ -50,9 +50,10 @@ class Address {
 
     toString() {
         return `
+            id: ${this[_id]},
             Road No: ${this[_roadNo]},
             City: ${this[_city]},
-            Region ${this[_region]},
+            Region ${this[_region]}, 
             Country: ${this[_country]},
             PostalCode: ${this[_postalCode]}
         `
