@@ -8,7 +8,8 @@ const interview = new Promise((resolve, reject)=> {
             Time: "10:30 Am"
         };
         resolve(interviewDetails);
-    } else {
+    } 
+    else {
         reject(new Error("Interview already Created...!"))
     }
 })
@@ -31,18 +32,18 @@ interview
 
 // Another Promise Example
 
-// const promise1 = new Promise((resolve, reject)=> {
-//     setTimeout(()=> {
-//         resolve("Promise one is completed...")
-//     })
-// }, 2000)
+const promise1 = new Promise((resolve, reject)=> {
+    setTimeout(()=> {
+        resolve("Promise one is completed...")
+    })
+}, 2000)
 
-// const promise2 = new Promise((resolve, reject)=> {
-//     setTimeout(()=> {
-//         resolve("Promise two is resolved..")
-//     })
-// }, 5000)
+const promise2 = new Promise((resolve, reject)=> {
+    setTimeout(()=> {
+        resolve("Promise two is resolved..")
+    })
+}, 5000)
 
-// Promise.all([promise1, promise2]).then((res)=> {
-//     console.log(res)
-// })
+Promise.all([promise1, promise2]).then((res)=> {
+    console.log(res)
+})
