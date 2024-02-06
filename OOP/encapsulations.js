@@ -34,6 +34,8 @@ const shakib = {
 // console.log(shakib.calculate_age())
 // console.log(shakib.getSalary())
 
+
+
 // Encapsolutions 
 class Programmer {
     // Private Property

@@ -48,7 +48,6 @@ function findDuplicatesUsingSet(arr) {
             console.log(element)
         }
     }
-
     return Array.from(duplicates);
 }
 
