@@ -55,8 +55,39 @@ const credit = student.depertment.subjects.reduce((a, b) => {
 // console.log(student)
 // console.log(credit)
 
-const dean = new Teacher(1, "khan", depertment.subjects[0]);
-const teacher1 =  new Teacher(1, "abul 1", depertment.subjects[1])
+const dean = new Teacher(1, "khan", depertment.subjects[0], '2541ABC');
+dean.blood = "O+";
+dean.depertment = depertment;
+dean.name = 40000
+dean.contact = new Contact({
+    id: 5,
+    email: 'ab@test.com',
+    phone: '01798946719',
+    address: new Address({
+        id:55,
+        roadNo: 102,
+        city:'Dhaka', 
+        country: 'Bangladesh',
+        postalCode: 13245643
+    })
+})
+
+const teacher1 =  new Teacher(1, "abul 1", depertment.subjects[1], 4251)
+teacher1.depertment = depertment
+teacher1.blood = "AB+",
+teacher1.salary = 4000222
+teacher1.contact = new Contact({
+    id: 6,
+    email: 'abac@test.com',
+    phone: '01798846719',
+    address: new Address({
+        id:556,
+        roadNo: 182,
+        city:'Dhaka', 
+        country: 'Bangladesh',
+        postalCode: 132456453
+    })
+})
 const teacher2 =  new Teacher(1, "abul 2", depertment.subjects[2])
 
 depertment.dean = dean;
