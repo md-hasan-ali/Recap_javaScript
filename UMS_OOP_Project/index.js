@@ -56,5 +56,12 @@ const credit = student.depertment.subjects.reduce((a, b) => {
 // console.log(credit)
 
 const dean = new Teacher(1, "khan", depertment.subjects[0]);
+const teacher1 =  new Teacher(1, "abul 1", depertment.subjects[1])
+const teacher2 =  new Teacher(1, "abul 2", depertment.subjects[2])
+
 depertment.dean = dean;
-console.log(student) 
+// depertment.addTeacher(dean)
+// depertment.addTeacher(teacher1)
+// depertment.addTeacher(teacher2)
+depertment.teachers = [dean, teacher1, teacher2]
+console.log(student.depertment) 
