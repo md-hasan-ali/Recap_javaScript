@@ -4,9 +4,9 @@ const _name = Symbol('name')
 const _blood = Symbol('blood')
 const _contact = Symbol('contact')
 
-class Person{
+class Person {
     constructor(id, name) {
-        this[_id]  = id;
+        this[_id] = id;
         this[_name] = name;
         this[_blood] = null;
         this[_contact] = null;
@@ -18,7 +18,7 @@ class Person{
         return this[_name]
     }
     set name(value) {
-       this[_name] = value;
+        this[_name] = value;
     }
     get blood() {
         return this[_blood]

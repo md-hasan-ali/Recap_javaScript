@@ -54,3 +54,28 @@ function findDuplicatesUsingSet(arr) {
 let arrayWithDuplicates = [1, 2, 3, 4, 3, 2, 5];
 let duplicatesSet = findDuplicatesUsingSet(arrayWithDuplicates);
 // console.log(duplicatesSet);  // Output: [2, 3]
+
+
+let fruits = ["banana", "apple", "orange", "grapes"];
+
+// Sorting in alphabetical order
+fruits.sort();
+console.log(fruits); 
+
+fruits.sort(function(a, b) {
+    return b.localeCompare(a);
+});
+console.log(fruits);
+
+
+let products = [
+    { name: "Laptop", price: 1000 },
+    { name: "Phone", price: 500 },
+    { name: "Tablet", price: 800 }
+];
+
+// Sorting by price in ascending order
+products.sort(function(a, b) {
+    return a.price - b.price;
+});
+console.log(products); 
