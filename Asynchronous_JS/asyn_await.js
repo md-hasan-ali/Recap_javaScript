@@ -43,3 +43,20 @@ async function callasync() {
 callasync()
 
 console.log("hello")
+
+
+function processData() {
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            const data =  'Data Fetched successfully..'
+            resolve(data)
+        }, 5000)
+    })
+}
+
+async function displayData() {
+    const data = await processData();
+    console.log(data)
+    console.log('Processing Data')
+}
+displayData()

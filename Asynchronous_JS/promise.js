@@ -69,3 +69,21 @@ fetchData()
         console.log(result)
         processData()
     })
+
+
+
+const promise4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Task Four is completed...")
+    })
+})
+
+const promise5 = new Promise((resolve, reject)=> {
+    setTimeout(()=> {
+        resolve("Task Five is completed...")
+    })
+})
+
+Promise.all([promise4, promise5]).then((result)=> {
+    console.log(result)
+})
