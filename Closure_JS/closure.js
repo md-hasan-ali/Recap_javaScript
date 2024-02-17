@@ -55,5 +55,55 @@ function appFunction(url) {
             console.log(res)
         })
 }
-appFunction("api url link needed!!");
-console.log("hello")
+// appFunction("api url link needed!!");
+// console.log("hello")
+
+
+const counter = () => {
+    let counter = 0;
+    const increment = () => {
+        counter++;
+        console.log(counter)
+    }
+    return increment;
+}
+// const result = counter()
+// result()
+// result()
+
+function createPerson(name) {
+    let age = 0;
+
+    function growOlder() {
+        age++;
+        console.log(`${name} is now ${age} years old.`);
+    }
+
+    function getAge() {
+        return age;
+    }
+
+    return {
+        growOlder,
+        getAge
+    };
+}
+
+// const person = createPerson('Alice');
+// person.growOlder(); 
+// console.log(person.getAge()); 
+
+
+const fetchData = (url, callback) => {
+    setTimeout(() => {
+        const data = 'Data Fatch from' + url;
+        callback(data)
+    }, 2000)
+}
+const processData = (url) => {
+    fetchData(url, (data) => {
+        console.log('Data Fetching...')
+        console.log(data)
+    })
+}
+processData('https://jsonplaceholder.typicode.com/posts/1')
