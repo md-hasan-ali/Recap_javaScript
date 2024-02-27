@@ -41,3 +41,16 @@ function PermanentEmp(id, name) {
 }
 const uniqueEmp = new PermanentEmp(101, "Hasan Ali")
 console.log(uniqueEmp.name)
+
+
+
+// const totalSum = (...rest) => {
+//     return rest.reduce((total, curr) => total + curr, 0)
+// }
+// console.log(totalSum(5, 5, 5, 5))
+
+const totalSum = (text, ...rest) => {
+    const result = rest.reduce((total, curr) => total + curr, 0)
+    console.log(`${text} ${result}`)
+}
+totalSum('The Sum is:', 5, 5, 5, 5);
